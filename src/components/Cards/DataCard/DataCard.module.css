@@ -43,7 +43,7 @@
 .graphLink:hover {
     background-color: #fff !important;
     color: #8675ff !important;
-    outline: 2px solid;
+    box-shadow: 0px 0px 0px 2px #8675ff;
 }
 
 .dataTitle {

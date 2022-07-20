@@ -21,7 +21,7 @@
 }
 
 .contributeCard:hover {
-    outline: 5px solid #8675ff;
+    box-shadow: 0px 0px 0px 5px #8675ff;
 }
 
 .title {
