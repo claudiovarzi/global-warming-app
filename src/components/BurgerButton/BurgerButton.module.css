@@ -1,0 +1,10 @@
+.navButton {
+    position: fixed;
+    z-index: 999;
+    color: #8675ff;
+    font-size: 2rem;
+    background: none;
+    cursor: pointer;
+    margin-left: 1.75rem;
+    background: none;
+}

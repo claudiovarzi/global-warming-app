@@ -1,0 +1,56 @@
+.container {
+    width: 30%;
+}
+
+.contributeCard {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px #6c757d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 6rem;
+    color: #8675ff;
+    cursor: pointer;
+}
+
+.contributeCard:hover {
+    outline: 5px solid #8675ff;
+}
+
+.title {
+    color: #000;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+.description {
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 10px 20px;
+    color: #6c757d;
+}
+
+/* mobile styles */
+@media screen and (max-width: 767px) {
+    .container {
+        width: 100%;
+    }
+
+    .contributeCard {
+        width: 100%;
+    }
+}
+
+/* tablet styles */
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+    .contributeCard {
+        height: 350px;
+    }
+}

@@ -1,70 +1,132 @@
-# Getting Started with Create React App
+<p align="center">
+  
+  <h3 align="center">(h)Earth</h3>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <p align="center">
+    A simply dashboard to show global-warming data, built with React. </p>
 
-## Available Scripts
+  <br>
+  <br>
 
-In the project directory, you can run:
+  <a href="https://github.com/claudiovarzi/global-warming-app">
+    <img src="src/assets/img/dashboard_screenshot.jpg" alt="(h)Earth-screenshot">
+  </a>
+</p>
 
-### `npm start`
+<details open="open">
+  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#links-contacts">Links & Contacts</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
+  </ol>
+</details>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## About The Project
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This is a simply dashboard made to sensitize the user on the global-warming topic: from its causes to its consequences, from its data to the individual actions we have to do in order to tackle the climate crisis before it's too late. Information and data are fetched from [global-warming.org](https://global-warming.org/).
+User can explore seven main routes:
 
-### `npm test`
+<ul>
+<li>the <strong>Home page</strong>, which contains general info about global-warming and links to the other sections,</li>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<li>the <strong>Temperature section</strong>, which contains the global temperature anomalies from year 1880 to present, </li>
 
-### `npm run build`
+<li>the <strong>Co2 section</strong>, which contains the carbon dioxide levels in the atmosphere from 2012 to present, </li>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<li>the <strong>Methane section</strong>, which contains the methane levels in the atmosphere from 1983 to present, </li>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<li>the <strong>No2 section</strong>, which contains the nitrous oxide levels in the atmosphere from 2001 to present, </li>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<li>the <strong>Glaciers section</strong>, which contains the arctic sea extent and area since 1979, </li>
 
-### `npm run eject`
+<li>the <strong>Contribute section</strong>, which contains ten individual actions that people should do individually to help tackle climate crisis, according to United Nations.</li>
+</ul>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Built With
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [React](https://it.reactjs.org/)
+- [react-router-dom-v6](https://reactrouter.com/docs/en/v6/upgrading/v5)
+- [CSS modules](https://github.com/css-modules/css-modules)
+- [Axios](https://github.com/axios/axios)
+- [Lodash](https://github.com/lodash/lodash)
+- [recharts](https://github.com/recharts/recharts)
+- [react-player](https://github.com/cookpete/react-player)
+- [react-responsive](https://www.npmjs.com/package/react-responsive)
+- [react-icons](https://react-icons.github.io/react-icons/)
+- [animate.css](https://github.com/animate-css/animate.css)
+- [react-onclickoutside](https://github.com/Pomax/react-onclickoutside)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Getting Started
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Prerequisites
 
-## Learn More
+Running the application requires [Node](https://nodejs.org/en/) to be installed on your operating system.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You can then install the latest version of npm from your terminal with the command:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```sh
+npm install npm@latest -g
+```
 
-### Code Splitting
+### Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Clone the repository locally with the git command:
 
-### Analyzing the Bundle Size
+   ```sh
+   git clone https://github.com/claudiovarzi/global-warming-app
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2. Install NPM packages:
 
-### Making a Progressive Web App
+   ```sh
+   npm install
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+3. Run the app with command:
 
-### Advanced Configuration
+   ```sh
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## License
 
-### Deployment
+Distributed under the MIT License. See `LICENSE` for more information.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Links & Contacts
 
-### `npm run build` fails to minify
+[@Claudio Varzi](https://www.linkedin.com/in/claudiovarzi/) - varziclaudio@gmail.com
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Project Repository: [global-warming-app](https://github.com/claudiovarzi/global-warming-app)
+
+Project Website: [(h)Earth - Netlify]()
+
+## Acknowledgements
+
+- [global-warming.org](https://global-warming.org/)
+- [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
+- [Awesome README](https://github.com/matiassingers/awesome-readme)
+- [React](https://it.reactjs.org/)
+- [react-router-dom-v6](https://reactrouter.com/docs/en/v6/upgrading/v5)
+- [CSS modules](https://github.com/css-modules/css-modules)
+- [Axios](https://github.com/axios/axios)
+- [Lodash](https://github.com/lodash/lodash)
+- [recharts](https://github.com/recharts/recharts)
+- [react-player](https://github.com/cookpete/react-player)
+- [react-responsive](https://www.npmjs.com/package/react-responsive)
+- [react-icons](https://react-icons.github.io/react-icons/)
+- [animate.css](https://github.com/animate-css/animate.css)
+- [react-onclickoutside](https://github.com/Pomax/react-onclickoutside)

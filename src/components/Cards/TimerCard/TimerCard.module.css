@@ -1,0 +1,46 @@
+.largeCard {
+    width: 80%;
+    height: 150px;
+    margin-top: 20px;
+    border-radius: 20px;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px #6c757d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title {
+    text-align: center;
+    padding: 10px 0;
+    font-weight: 500;
+    letter-spacing: 0.025rem;
+    font-size: 1rem;
+}
+
+.description {
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 10px;
+    color: #6c757d;
+}
+
+/* mobile styles */
+@media screen and (max-width: 767px) {
+    .largeCard{
+        height: 200px;
+        width: 95%;
+    }
+
+    .title {
+        padding: 10px 20px;
+        margin-bottom: 10px;
+    }
+
+    .description {
+        margin-top: 15px;
+        padding: 10px;
+    }
+}

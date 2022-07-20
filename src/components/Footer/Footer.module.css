@@ -1,0 +1,29 @@
+.footer {
+    font-size: 0.7rem;
+    letter-spacing: 0.05rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    color: #6c757d;
+}
+
+.credits {
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact {
+    margin-left: 3px;
+} 
+
+.contact:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    margin: 0 auto;
+    margin-top: 5px;
+}

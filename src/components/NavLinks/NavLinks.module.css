@@ -1,0 +1,22 @@
+.navItem {
+    list-style: none;
+    cursor: pointer;
+    width: 80%;
+    margin-bottom: 15px;
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem;
+    padding: 10px;
+}
+
+.navItem span {
+    margin-left: 10px;
+    text-transform: capitalize;
+}
+
+.navItem:hover {
+    background-color: #8675ff;
+    color: #fff;
+    border-radius: 5px;
+}

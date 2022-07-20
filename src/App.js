@@ -1,25 +1,32 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Sidebar from './components/Sidebar/Sidebar';
+import Home from './pages/Home/Home';
+import Temperature from './pages/Temperature/Temperature';
+import Co2 from './pages/Co2/Co2';
+import Methane from './pages/Methane/Methane';
+import No2 from './pages/No2/No2';
+import Glaciers from './pages/Glaciers/Glaciers';
+import Contribute from './pages/Contribute/Contribute';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="app">
+			<BrowserRouter>
+				<Sidebar />
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="temperature" element={<Temperature />} />
+					<Route path="co2" element={<Co2 />} />
+					<Route path="methane" element={<Methane />} />
+					<Route path="no2" element={<No2 />} />
+					<Route path="glaciers" element={<Glaciers />} />
+					<Route path="contribute" element={<Contribute />} />
+				</Routes>
+			</BrowserRouter>
+		</div>
+	);
 }
 
 export default App;

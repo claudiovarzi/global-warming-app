@@ -1,0 +1,22 @@
+.timer {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timer p {
+    font-size: 2rem;
+    margin-right: 10px;
+    color: #8675ff;
+    letter-spacing: 0.1rem;
+}
+
+/* mobile styles */
+@media screen and (max-width: 767px) {
+    .timer p {
+        font-size: 1.2rem;
+        margin-right: 5px;
+    }
+}

@@ -1,0 +1,57 @@
+.navbar {
+    height: 10vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+.navMenu {
+    background-color: #fff;
+    width: 250px;
+    height: 100vh;
+    display: flex ;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: 850ms;
+    z-index: 999;
+    
+}
+
+.active {
+    background-color: #fff;
+    width: 250px;
+    height: 100vh;
+    display: flex ;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 350ms;
+    box-shadow: 0px 0px 10px #6c757d;
+    z-index: 999;
+}
+
+.navClose {
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    width: fit-content;
+    margin: 2vh 0 2.5vh 1.5rem;
+    font-size: 2.5rem;
+    background: none;
+    color: #8675ff;
+    cursor: pointer;
+}
+
+.navLinks {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1.5rem;
+}

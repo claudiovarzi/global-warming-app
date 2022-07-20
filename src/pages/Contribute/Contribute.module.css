@@ -1,0 +1,86 @@
+.main {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    width: 100%;
+    font-weight: 400;
+    letter-spacing: 0.125rem;
+    padding: 20px;
+    text-align: center;
+}
+
+.subtitle {
+    width: 100%;
+    color: #6c757d;
+    line-height: 1.75rem;
+    padding: 20px;
+    text-align: center;
+}
+
+.cardGrid {
+    width: 100%;
+    max-width: 900px;
+    margin: 50px 0 30px 0;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+}
+
+.link {
+    border: 2px solid #8675ff;
+    letter-spacing: 0.05rem;
+    font-weight: 400;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.link:hover {
+    color: #fff;
+    background-color: #8675ff;
+}
+
+/* mobile styles */
+@media only screen and (max-width: 767px) {
+    .title {
+        text-align: start;
+    }
+
+    .subtitle {
+        text-align: justify;
+    }
+    
+    .cardGrid {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* tablet styles */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .title {
+        text-align: center;
+    }
+
+    .subtitle {
+        text-align: center;
+    }
+
+    .cardGrid {
+        max-width: 600px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
