@@ -9,7 +9,7 @@
   <br>
 
   <a href="https://github.com/claudiovarzi/global-warming-app">
-    <img src="src/assets/img/dashboard_screenshot.jpg" alt="(h)Earth-screenshot">
+    <img src="src/assets/img/dashboard_screenshot.png" alt="(h)Earth-screenshot">
   </a>
 </p>
 
@@ -37,7 +37,7 @@
 
 ## About The Project
 
-This is a simply dashboard made to sensitize the user on the global-warming topic: from its causes to its consequences, from its data to the individual actions we have to do in order to tackle the climate crisis before it's too late. Information and data are fetched from [global-warming.org](https://global-warming.org/).
+This is a simply dashboard made to sensitize the user on the global-warming topic: from its causes to its consequences, from its data to the individual actions we have to do in order to tackle the climate crisis before it's too late. Information and data are fetched from [global-warming APIs](https://global-warming.org/).
 User can explore seven main routes:
 
 <ul>
