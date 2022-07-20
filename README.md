@@ -112,7 +112,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Project Repository: [global-warming-app](https://github.com/claudiovarzi/global-warming-app)
 
-Project Website: [(h)Earth - Netlify]()
+Project Website: [(h)Earth - Netlify](https://h-earth.netlify.app/)
 
 ## Acknowledgements
 
