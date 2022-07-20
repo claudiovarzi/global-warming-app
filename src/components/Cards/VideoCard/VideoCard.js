@@ -39,6 +39,7 @@ export default function VideoCard() {
 		>
 			<h3 className={styles.title}>{dashboardCardsData.video.title}</h3>
 			{currentUI}
+			<p className={styles.details}>{dashboardCardsData.video.details}</p>
 		</div>
 	);
 }

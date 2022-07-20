@@ -51,6 +51,13 @@
     animation-delay: 1.5s;
 }
 
+.details {
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 10px 10px;
+    color: #6c757d;
+}
+
 @keyframes pulse-border {
     0% {
         transform: scale(1);

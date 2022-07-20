@@ -45,7 +45,7 @@ const dashboardCardsData = {
 			/>
 		),
 		description: '',
-		details: '',
+		details: 'source: National Geographic',
 	},
 	data: {
 		id: 3,
