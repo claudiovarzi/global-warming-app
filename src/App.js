@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import Sidebar from './components/Sidebar/Sidebar';
 import Home from './pages/Home/Home';
 import Temperature from './pages/Temperature/Temperature';
@@ -14,6 +15,7 @@ function App() {
 	return (
 		<div className="app">
 			<BrowserRouter>
+				<ScrollToTop />
 				<Sidebar />
 				<Routes>
 					<Route path="/" element={<Home />} />

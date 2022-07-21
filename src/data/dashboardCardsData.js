@@ -41,7 +41,6 @@ const dashboardCardsData = {
 				width="80%"
 				height="80%"
 				playing={true}
-				muted={true}
 			/>
 		),
 		description: '',

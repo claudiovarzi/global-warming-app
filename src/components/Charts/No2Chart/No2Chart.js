@@ -26,10 +26,10 @@ export default function No2Chart(props) {
 				>
 					<CartesianGrid strokeDasharray="3 3" />
 					<XAxis
-						label={{ value: 'Year', position: 'bottom', offset: 18 }}
+						label={{ value: 'Year', position: 'bottom', offset: 19 }}
 						dataKey="year"
-						angle={-45}
-						tickMargin={15}
+						angle={-35}
+						tickMargin={10}
 					/>
 					<YAxis
 						label={{ value: 'ppb', angle: -90, position: 'insideLeft', offset: 0 }}

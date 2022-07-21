@@ -26,11 +26,11 @@ export default function Co2Chart(props) {
 				>
 					<CartesianGrid strokeDasharray="3 3" />
 					<XAxis
-						label={{ value: 'Year', position: 'bottom', offset: 18 }}
+						label={{ value: 'Year', position: 'bottom', offset: 19 }}
 						padding={{ left: 30, right: 30 }}
 						dataKey="year"
-						angle={-45}
-						tickMargin={15}
+						angle={-35}
+						tickMargin={10}
 					/>
 					<YAxis
 						label={{ value: 'ppm', angle: -90, position: 'insideLeft', offset: 0 }}

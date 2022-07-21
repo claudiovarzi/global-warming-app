@@ -25,7 +25,7 @@ export default function Glaciers() {
 	// if API call has errors renders a message instead of chart
 	const currentUI = error ? <ApiError errorType={error} /> : <GlaciersChart data={filteredData} />;
 
-	console.log(filteredData);
+	//console.log(filteredData);
 
 	return (
 		<main className={styles.main}>

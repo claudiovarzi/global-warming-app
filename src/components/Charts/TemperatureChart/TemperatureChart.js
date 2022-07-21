@@ -50,11 +50,11 @@ export default function TemperatureChart(props) {
 					</defs>
 					<CartesianGrid strokeDasharray="3 3" />
 					<XAxis
-						label={{ value: 'Year', position: 'bottom', offset: 18 }}
+						label={{ value: 'Year', position: 'bottom', offset: 19 }}
 						dataKey="time"
-						angle={-45}
+						angle={-35}
 						interval={19}
-						tickMargin={20}
+						tickMargin={10}
 					/>
 					<YAxis
 						label={{ value: '° Celsius', angle: -90, position: 'insideLeft', offset: 10 }}
