@@ -1,6 +1,15 @@
+.pageHeader {
+    text-align: center;
+}
+
+.logo {
+    height: 50px;
+    margin-top: 10px;
+}
+
 .title, .subtitle {
     text-align: center;
-    padding: 20px 20px;
+    padding: 10px 20px;
     color: #000;
     font-weight: 500;
     letter-spacing: 0.125rem;
@@ -9,4 +18,5 @@
 .subtitle {
     color: #6c757d;
     font-weight: 400;
+    margin-bottom: 30px;
 }

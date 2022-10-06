@@ -1,38 +1,42 @@
 import React from 'react';
-import styles from './Methane.module.css';
-import PageHeader from '../../components/PageHeader/PageHeader';
+import styles from '../PagesStyles.module.css';
+import Sidebar from '../../components/Sidebar/Sidebar';
+import CardBase from '../../components/Cards/CardBase/CardBase';
 import MethaneChart from '../../components/Charts/MethaneChart/MethaneChart';
 import ApiError from '../../components/ApiError/ApiError';
-import PageContent from '../../components/PageContent/PageContent';
-import useFetch from '../../hooks/useFetch';
-import fetchLinks from '../../data/fetchLinks';
 import pagesData from '../../data/pagesData';
+import { fetchData } from '../../clientAPI/fetchData';
+import fetchLinks from '../../clientAPI/fetchLinks';
+import { useQuery } from '@tanstack/react-query';
+import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner';
+import { useTranslation } from 'react-i18next';
 
 export default function Methane() {
-	// fetch data with custom hook
-	const { data, error } = useFetch(fetchLinks.methane);
-	const { methane } = data;
+	const { isLoading, isError, isSuccess, error, data } = useQuery(['MethaneData'], () =>
+		fetchData(fetchLinks.methane)
+	);
 
-	// filter data by year
-	const filteredData = methane
-		.filter((object) => object.date.includes('.7'))
-		.map((object) => {
-			return {
-				year: object.date.replace('.7', ''),
-				ppm: object.average,
-			};
-		});
-
-	// if API call has errors renders a message instead of chart
-	const currentUI = error ? <ApiError errorType={error} /> : <MethaneChart data={filteredData} />;
-
-	// console.log(filteredData);
+	const { t } = useTranslation();
 
 	return (
-		<main className={styles.main}>
-			<PageHeader title={pagesData.methane.title} subtitle={pagesData.methane.subtitle} />
-			{currentUI}
-			<PageContent description={pagesData.methane.description} link={pagesData.methane.link} />
-		</main>
+		<>
+			<Sidebar />
+			<main className={styles.main}>
+				<CardBase
+					showHeader={true}
+					title={t('methane.title')}
+					subtitle={t('methane.subtitle')}
+					showContent={true}
+					description={t('methane.description')}
+					link={pagesData.methane.link}
+				>
+					{isLoading && <LoadingSpinner />}
+
+					{isError && <ApiError error={error} />}
+
+					{isSuccess && <MethaneChart data={data} />}
+				</CardBase>
+			</main>
+		</>
 	);
 }

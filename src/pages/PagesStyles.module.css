@@ -1,0 +1,12 @@
+.main {
+    width: 95%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+    .main {
+        width: 80%;
+    }
+}

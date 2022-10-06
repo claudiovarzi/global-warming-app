@@ -1,8 +1,9 @@
 import React from 'react';
-import styles from './FlipCard.module.css';
+import CardBase from '../CardBase/CardBase';
+import styles from '../CardBase/CardBase.module.css';
 import 'animate.css';
 
-export default function FlipCard(props) {
+const FlipCard = (props) => {
 	// card flip state
 	const [isFlipped, setIsFlipped] = React.useState(false);
 
@@ -12,7 +13,7 @@ export default function FlipCard(props) {
 
 	// conditionally render card content based on flip state
 	const currentUI = isFlipped ? (
-		<p className={styles.description}>{props.description}</p>
+		<p className={styles.notALink}>{props.description}</p>
 	) : (
 		<div>
 			<div className={styles.cardIcon} style={propStyles}>
@@ -27,13 +28,17 @@ export default function FlipCard(props) {
 		setIsFlipped((isFlipped) => !isFlipped);
 	}
 
-	const cardClass = isFlipped
-		? `${styles.card} ${'animate__animated animate__flipInY'}`
-		: `${styles.card} ${'animate__animated animate__zoomInDown'}`;
+	const flipClass = isFlipped
+		? `${'animate__animated animate__flipInY'}`
+		: `${'animate__animated animate__zoomInDown'}`;
 
 	return (
-		<div className={cardClass} onClick={flipCard}>
-			{currentUI}
+		<div className={flipClass} onClick={flipCard}>
+			<CardBase type="flipCard" isFlipCard={props.isFlipCard}>
+				{currentUI}
+			</CardBase>
 		</div>
 	);
-}
+};
+
+export default FlipCard;

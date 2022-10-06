@@ -23,7 +23,7 @@ export const sidebarData = [
 	},
 	{
 		id: 3,
-		title: 'co2',
+		title: `CO2`,
 		path: '/co2',
 		icon: <FaSmog />,
 	},
@@ -35,7 +35,7 @@ export const sidebarData = [
 	},
 	{
 		id: 5,
-		title: 'no2',
+		title: 'NO2',
 		path: '/no2',
 		icon: <SiMoleculer />,
 	},

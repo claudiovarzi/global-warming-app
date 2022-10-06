@@ -1,0 +1,68 @@
+.videoContainer {
+    width: 80%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff url(../../assets/img/bear.png) no-repeat;
+	background-size: 250px;
+	background-position: center;
+}
+
+.playButtonContainer {
+    color: #8675ff;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding-top: 80px;
+    font-size: 5rem;
+}
+
+.playButton {
+    z-index: 99;
+    cursor: pointer;
+}
+
+.borderAnimation {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    border: 0.55rem solid #adb5bd;
+    border-radius: 50%;
+    animation: pulse-border 2s linear infinite;
+}
+
+.firstBorder {
+    animation-delay: 1s;
+}
+
+.secondBorder {
+    animation-delay: 1.5s;
+}
+
+.details {
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 10px 10px;
+    color: #6c757d;
+}
+
+@keyframes pulse-border {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .videoCard {
+        width: 100%;
+        margin: 0;
+    }
+}

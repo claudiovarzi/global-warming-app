@@ -1,42 +1,42 @@
 import React from 'react';
-import styles from './Temperature.module.css';
-import PageHeader from '../../components/PageHeader/PageHeader';
+import styles from '../PagesStyles.module.css';
+import Sidebar from '../../components/Sidebar/Sidebar';
+import CardBase from '../../components/Cards/CardBase/CardBase';
 import TemperatureChart from '../../components/Charts/TemperatureChart/TemperatureChart';
-import ApiError from '../../components/ApiError/ApiError';
-import PageContent from '../../components/PageContent/PageContent';
-import useFetch from '../../hooks/useFetch';
-import fetchLinks from '../../data/fetchLinks';
+import { fetchData } from '../../clientAPI/fetchData';
+import fetchLinks from '../../clientAPI/fetchLinks';
+import { useQuery } from '@tanstack/react-query';
 import pagesData from '../../data/pagesData';
+import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner';
+import ApiError from '../../components/ApiError/ApiError';
+import { useTranslation } from 'react-i18next';
 
 export default function Temperature() {
-	// fetch data with custom hook
-	const { data, error } = useFetch(fetchLinks.temperature);
-	const { result } = data;
-
-	// filter data by year
-	const filteredData = result
-		.filter((object) => object.time.includes('.04'))
-		.map((object) => {
-			return {
-				time: object.time.replace('.04', ''),
-				temperature: object.station,
-			};
-		});
-
-	// if API call has errors renders a message instead of chart
-	const currentUI = error ? (
-		<ApiError errorType={error} />
-	) : (
-		<TemperatureChart data={filteredData} />
+	const { isLoading, isError, isSuccess, error, data } = useQuery(['temperatureData'], () =>
+		fetchData(fetchLinks.temperature)
 	);
 
-	//console.log(filteredData);
+	const { t } = useTranslation();
 
 	return (
-		<main className={styles.main}>
-			<PageHeader title={pagesData.temperature.title} subtitle={pagesData.temperature.subtitle} />
-			{currentUI}
-			<PageContent description={pagesData.temperature.description} link={pagesData.temperature.link} />
-		</main>
+		<>
+			<Sidebar />
+			<main className={styles.main}>
+				<CardBase
+					showHeader={true}
+					title={t('temperature.title')}
+					subtitle={t('temperature.subtitle')}
+					showContent={true}
+					description={t('temperature.description')}
+					link={pagesData.temperature.link}
+				>
+					{isLoading && <LoadingSpinner />}
+
+					{isError && <ApiError error={error} />}
+
+					{isSuccess && <TemperatureChart data={data} />}
+				</CardBase>
+			</main>
+		</>
 	);
 }

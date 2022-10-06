@@ -1,6 +1,9 @@
 import Timer from '../components/Timer/Timer';
-import ReactPlayer from 'react-player/lazy';
 import DashboardChart from '../components/Charts/DashboardChart/DashboardChart';
+import PlayButton from '../components/PlayButton/PlayButton';
+import CausesList from '../components/CausesList/CausesList';
+import ChartSelector from '../components/ChartSelector/ChartSelector';
+import ContributeButton from '../components/ContributeButton/ContributeButton';
 import { FaTemperatureHigh } from 'react-icons/fa';
 import { FaSmog } from 'react-icons/fa';
 import { MdAir } from 'react-icons/md';
@@ -21,7 +24,9 @@ const dashboardCardsData = {
 		id: 2,
 		title: `Global warming causes (%)`,
 		content: <DashboardChart />,
-		description: [
+		secondContent: <CausesList />,
+		description: `source: US Environmental Protection Agency`,
+		details: [
 			'Energy production',
 			'Production of goods',
 			'Deforestation',
@@ -29,27 +34,23 @@ const dashboardCardsData = {
 			'Electricity supply for buildings',
 			'Other',
 		],
-		details: `source: US Environmental Protection Agency`,
+		link: 'https://www.epa.gov/ghgemissions/global-greenhouse-gas-emissions-data',
 	},
 	video: {
 		id: 2,
 		title: `Global warming effects`,
-		content: (
-			<ReactPlayer
-				url="https://www.youtube.com/watch?v=G4H1N_yXBiA"
-				controls={true}
-				width="80%"
-				height="80%"
-				playing={true}
-			/>
-		),
-		description: '',
-		details: 'source: National Geographic',
+		content: <PlayButton />,
+		description: 'source: National Geographic',
+		details: '',
+		link: 'https://www.nationalgeographic.com/environment/article/global-warming-effects',
 	},
 	data: {
 		id: 3,
 		title: `Live graphs`,
-		content: [
+		content: <ChartSelector />,
+		description: 'source: global-warming.org',
+		link: 'https://global-warming.org/',
+		details: [
 			{
 				id: 1,
 				title: 'Temperature',
@@ -59,7 +60,7 @@ const dashboardCardsData = {
 			},
 			{
 				id: 2,
-				title: `Co2`,
+				title: `CO2`,
 				path: '/co2',
 				icon: <FaSmog />,
 				backgroundColor: '#6c8dfa',
@@ -73,7 +74,7 @@ const dashboardCardsData = {
 			},
 			{
 				id: 4,
-				title: 'no2',
+				title: 'NO2',
 				path: '/no2',
 				icon: <SiMoleculer />,
 				backgroundColor: '#ff9770',
@@ -86,15 +87,29 @@ const dashboardCardsData = {
 				backgroundColor: '#63dfe4',
 			},
 		],
-		description: 'source: global-warming.org',
-		details: '',
 	},
 	contribute: {
 		id: 4,
 		title: `Contribute`,
-		content: <RiHandHeartLine />,
+		content: <ContributeButton />,
 		description: 'find out how to help tackle the climate crisis now!',
+		details: <RiHandHeartLine />,
+	},
+	accordion_1: {
+		id: 5,
+		title: `What is global warming ?`,
+		content: `Global warming or "climate change" refers to long-term shifts in temperatures and weather patterns. These shifts may be natural, such as through variations in the solar cycle. But since the 1800s, human activities have been the main driver of climate change, primarily due to burning fossil fuels like coal, oil and gas. Burning fossil fuels generates greenhouse gas emissions that act like a blanket wrapped around the Earth, trapping the sun’s heat and raising temperatures.`,
+		description: `source: United Nations`,
 		details: '',
+		link: 'https://www.un.org/en/climatechange/what-is-climate-change',
+	},
+	accordion_2: {
+		id: 5,
+		title: `What are greenhouse gasses ?`,
+		content: `Gases that trap heat in the atmosphere are called greenhouse gases. The primary greenhouse gases in Earth's atmosphere are water vapor (H2O), carbon dioxide (CO2), methane (CH4), nitrous oxide (N2O), and ozone (O3). Examples of greenhouse gas emissions that are causing climate change include carbon dioxide and methane. These come from using gasoline for driving a car or coal for heating a building, for example. Clearing land and forests can also release carbon dioxide. Landfills for garbage are a major source of methane emissions. Energy, industry, transport, buildings, agriculture and land use are among the main emitters.`,
+		description: `source: US Environmental Protection Agency`,
+		details: '',
+		link: 'https://www.epa.gov/ghgemissions/overview-greenhouse-gases#overview',
 	},
 };
 

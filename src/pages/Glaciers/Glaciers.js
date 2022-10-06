@@ -1,37 +1,42 @@
 import React from 'react';
-import styles from './Glaciers.module.css';
-import PageHeader from '../../components/PageHeader/PageHeader';
-import PageContent from '../../components/PageContent/PageContent';
+import styles from '../PagesStyles.module.css';
+import Sidebar from '../../components/Sidebar/Sidebar';
+import CardBase from '../../components/Cards/CardBase/CardBase';
 import GlaciersChart from '../../components/Charts/GlaciersChart/GlaciersChart';
 import ApiError from '../../components/ApiError/ApiError';
-import useFetch from '../../hooks/useFetch';
-import fetchLinks from '../../data/fetchLinks';
 import pagesData from '../../data/pagesData';
+import { fetchData } from '../../clientAPI/fetchData';
+import fetchLinks from '../../clientAPI/fetchLinks';
+import { useQuery } from '@tanstack/react-query';
+import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner';
+import { useTranslation } from 'react-i18next';
 
 export default function Glaciers() {
-	// fetch data with custom hook
-	const { data, error } = useFetch(fetchLinks.glaciers);
-	const { arcticData } = data;
+	const { isLoading, isError, isSuccess, error, data } = useQuery(['glaciersData'], () =>
+		fetchData(fetchLinks.glaciers)
+	);
 
-	// filter data by year
-	const filteredData = arcticData.map((object) => {
-		return {
-			year: object.year,
-			extent: object.extent,
-			area: object.area,
-		};
-	});
-
-	// if API call has errors renders a message instead of chart
-	const currentUI = error ? <ApiError errorType={error} /> : <GlaciersChart data={filteredData} />;
-
-	//console.log(filteredData);
+	const { t } = useTranslation();
 
 	return (
-		<main className={styles.main}>
-			<PageHeader title={pagesData.glaciers.title} subtitle={pagesData.glaciers.subtitle} />
-			{currentUI}
-			<PageContent description={pagesData.glaciers.description} link={pagesData.glaciers.link} />
-		</main>
+		<>
+			<Sidebar />
+			<main className={styles.main}>
+				<CardBase
+					showHeader={true}
+					title={t('glaciers.title')}
+					subtitle={t('glaciers.subtitle')}
+					showContent={true}
+					description={t('glaciers.description')}
+					link={pagesData.glaciers.link}
+				>
+					{isLoading && <LoadingSpinner />}
+
+					{isError && <ApiError error={error} />}
+
+					{isSuccess && <GlaciersChart data={data} />}
+				</CardBase>
+			</main>
+		</>
 	);
 }

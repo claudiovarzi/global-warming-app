@@ -12,17 +12,3 @@
     text-align: justify;
     color: #6c757d;
 }
-
-.link {
-    border: 2px solid #8675ff;
-    letter-spacing: 0.05rem;
-    font-weight: 400;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin-bottom: 30px;
-}
-
-.link:hover {
-    color: #fff;
-    background-color: #8675ff;
-}

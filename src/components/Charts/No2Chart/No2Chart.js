@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './No2Chart.module.css';
+import styles from '../ChartStyles.module.css';
 import {
 	LineChart,
 	Line,
@@ -9,13 +9,26 @@ import {
 	Tooltip,
 	ResponsiveContainer,
 } from 'recharts'; /* chart library (https://recharts.org/en-US) */
+import { useTranslation } from 'react-i18next';
 
-export default function No2Chart(props) {
+export default function No2Chart({ data }) {
+	// filter data by year
+	const filteredData = data.nitrous
+		.filter((object) => object.date.includes('.3'))
+		.map((object) => {
+			return {
+				year: object.date.replace('.3', ''),
+				ppb: object.average,
+			};
+		});
+
+	const { t } = useTranslation();
+
 	return (
 		<div className={styles.chartContainer}>
 			<ResponsiveContainer width="100%" height="100%">
 				<LineChart
-					data={props.data}
+					data={filteredData}
 					syncId="id"
 					margin={{
 						top: 10,
@@ -26,13 +39,13 @@ export default function No2Chart(props) {
 				>
 					<CartesianGrid strokeDasharray="3 3" />
 					<XAxis
-						label={{ value: 'Year', position: 'bottom', offset: 19 }}
+						label={{ value: t('no2.chart.labelX'), position: 'bottom', offset: 17 }}
 						dataKey="year"
 						angle={-35}
 						tickMargin={10}
 					/>
 					<YAxis
-						label={{ value: 'ppb', angle: -90, position: 'insideLeft', offset: 0 }}
+						label={{ value: t('no2.chart.labelY'), angle: -90, position: 'insideLeft', offset: 0 }}
 						dataKey="ppb"
 						type="number"
 						domain={['dataMin', 'auto']}
@@ -43,7 +56,7 @@ export default function No2Chart(props) {
 						type="monotone"
 						dataKey="ppb"
 						dot={{ strokeWidth: 2, r: 2 }}
-						stroke="#56da65"
+						stroke="#ff9770"
 						strokeWidth={2}
 						activeDot={{ r: 8 }}
 					/>

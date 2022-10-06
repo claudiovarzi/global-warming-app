@@ -37,7 +37,7 @@
 
 ## About The Project
 
-This is a simply dashboard made to sensitize the user on the global-warming topic: from its causes to its consequences, from its data to the individual actions we have to do in order to tackle the climate crisis before it's too late. Data are fetched from [global-warming APIs](https://global-warming.org/), other info are made of personal research.
+This is a simply dashboard made to sensitize users on global-warming: from its causes to its consequences, from its data to the individual actions we have to do in order to tackle the climate crisis before it's too late. Data are fetched from [global-warming APIs](https://global-warming.org/), other info are made of personal research.
 User can explore seven main routes:
 
 <ul>
@@ -45,11 +45,11 @@ User can explore seven main routes:
 
 <li>the <strong>Temperature section</strong>, which contains the global temperature anomalies from year 1880 to present, </li>
 
-<li>the <strong>Co2 section</strong>, which contains the carbon dioxide levels in the atmosphere from 2012 to present, </li>
+<li>the <strong>CO2 section</strong>, which contains the carbon dioxide levels in the atmosphere from 2012 to present, </li>
 
 <li>the <strong>Methane section</strong>, which contains the methane levels in the atmosphere from 1983 to present, </li>
 
-<li>the <strong>No2 section</strong>, which contains the nitrous oxide levels in the atmosphere from 2001 to present, </li>
+<li>the <strong>NO2 section</strong>, which contains the nitrous oxide levels in the atmosphere from 2001 to present, </li>
 
 <li>the <strong>Glaciers section</strong>, which contains the arctic sea extent and area since 1979, </li>
 
@@ -61,12 +61,15 @@ User can explore seven main routes:
 - [React](https://it.reactjs.org/)
 - [react-router-dom-v6](https://reactrouter.com/docs/en/v6/upgrading/v5)
 - [CSS modules](https://github.com/css-modules/css-modules)
+- [react-query](https://tanstack.com/query/v4)
 - [Axios](https://github.com/axios/axios)
-- [Lodash](https://github.com/lodash/lodash)
+- [react-i18next](https://react.i18next.com/)
 - [recharts](https://github.com/recharts/recharts)
 - [react-player](https://github.com/cookpete/react-player)
+- [react-spinners](https://www.davidhu.io/react-spinners/)
 - [react-responsive](https://www.npmjs.com/package/react-responsive)
 - [react-icons](https://react-icons.github.io/react-icons/)
+- [react-country-flag](https://www.npmjs.com/package/react-country-flag)
 - [animate.css](https://github.com/animate-css/animate.css)
 - [react-onclickoutside](https://github.com/Pomax/react-onclickoutside)
 
@@ -116,17 +119,10 @@ Project Website: [(h)Earth - Netlify](https://h-earth.netlify.app/)
 
 ## Acknowledgements
 
+- [Start2impact University](https://www.start2impact.it/)
 - [global-warming.org](https://global-warming.org/)
+- [US Environmental Protection Agency](https://www.epa.gov/)
+- [National Geographic](https://www.nationalgeographic.com/)
+- [United Nations](https://www.un.org/en/)
 - [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
 - [Awesome README](https://github.com/matiassingers/awesome-readme)
-- [React](https://it.reactjs.org/)
-- [react-router-dom-v6](https://reactrouter.com/docs/en/v6/upgrading/v5)
-- [CSS modules](https://github.com/css-modules/css-modules)
-- [Axios](https://github.com/axios/axios)
-- [Lodash](https://github.com/lodash/lodash)
-- [recharts](https://github.com/recharts/recharts)
-- [react-player](https://github.com/cookpete/react-player)
-- [react-responsive](https://www.npmjs.com/package/react-responsive)
-- [react-icons](https://react-icons.github.io/react-icons/)
-- [animate.css](https://github.com/animate-css/animate.css)
-- [react-onclickoutside](https://github.com/Pomax/react-onclickoutside)

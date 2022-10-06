@@ -1,0 +1,65 @@
+.graphMenu {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.graphLink {
+    margin: 10px 20px;
+    border-radius: 20px;
+    width: 130px;
+    height: 130px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 3rem;
+    box-shadow: 0px 0px 5px #e2e7fa;
+    color: #fff;
+}
+
+.graphLink:hover {
+    background-color: #fff !important;
+    color: #8675ff !important;
+    box-shadow: 0px 0px 0px 2px #8675ff;
+}
+
+.dataTitle {
+    width: 100%;
+    padding: 10px 5px;
+    margin: 0 0 10px 0;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.0125rem;
+}
+
+/* mobile styles */
+@media screen and (max-width: 767px) {
+    .graphMenu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .graphLink {
+        width: 200px;
+        height: 200px;
+    }
+
+    .dataTitle {
+        margin: 10px 0 40px 0;
+        font-size: 1.2rem;
+    }
+}
+
+/* tablet styles */
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+    .dataTitle {
+        font-size: 0.8rem;
+    }
+}

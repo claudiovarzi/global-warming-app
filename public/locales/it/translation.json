@@ -1,0 +1,153 @@
+ {
+    "home": {
+        "title": "(h)Earth",
+        "subtitle": "la tua dashboard sul riscaldamento globale",
+        "dashboard": {
+            "accordion_1": {
+                "title": "Cos'è il riscaldamento globale ?",
+                "content": "Il riscaldamento globale o il cambiamento climatico si riferisce ai cambiamenti a lungo termine delle temperature e dei modelli meteorologici. Questi cambiamenti possono essere naturali, ad esempio attraverso variazioni del ciclo solare. Dal 1800 però, le attività umane sono state il principale motore del cambiamento climatico, principalmente a causa della combustione di combustibili fossili come carbone, petrolio e gas. La combustione di combustibili fossili genera emissioni di gas serra che agiscono come una coperta avvolta intorno alla Terra, intrappolando il calore del sole e aumentandone le temperature.",
+                "description": "fonte: ONU"
+            },
+            "accordion_2": {
+                "title": "Cosa sono i gas serra ?",
+                "content": "I gas che intrappolano il calore nell'atmosfera sono chiamati gas serra. I principali gas serra nell'atmosfera terrestre sono: vapore acqueo (H2O), anidride carbonica (CO2), metano (CH4), protossido di azoto (N2O) e ozono (O3). Esempi di emissioni di gas serra che stanno causando il cambiamento climatico includono anidride carbonica e metano. Questi derivano dall'uso della benzina per guidare un'auto o del carbone per riscaldare un edificio, ad esempio. Anche la bonifica di terreni e foreste può rilasciare anidride carbonica. Le discariche per i rifiuti sono una delle principali fonti di emissioni di metano. Energia, industria, trasporti, edilizia, agricoltura e uso del suolo sono tra i principali emettitori.",
+                "description": "fonte: US Environmental Protection Agency"
+            },
+            "chart": {
+                "title": "Cause del riscaldamento globale (%)",
+                "description": "fonte: US Environmental Protection Agency",
+                "details": [
+                    "Produzione di energia",
+                    "Produzione di beni",
+                    "Deforestazione",
+                    "Settore dei trasporti",
+                    "Fornitura elettrica per gli edifici",
+                    "Altro"
+                ]
+            },
+            "video": {
+                "title": "Effetti del riscaldamento globale",
+                "description": "fonte: National Geographic"
+            },
+            "data": {
+                "title": "Grafici in tempo reale",
+                "description": "fonte: global-warming.org",
+                "chartSelector": [
+                    "Temperatura",
+                    "CO2",
+                    "Metano",
+                    "NO2",
+                    "Ghiacciai"
+                ]
+            },
+            "timer": {
+                "title": "Quanto tempo ci rimane",
+                "description": "per mantenere il riscaldamento globale sotto 1.5°C, le emissioni di gas serra devono essere ridotte del 45% entro il 2030."
+            },
+            "contribute": {
+                "title": "Contribuisci",
+                "description": "scopri subito come aiutare ad affrontare la crisi climatica!"
+            }
+        }
+    },
+    "temperature": {
+        "title": "Temperatura",
+        "subtitle": "Anomalie della temperatura globale dal 1880 ad oggi",
+        "chart": {
+            "labelX": "Anno",
+            "labelY": "° Celsius"
+        },
+        "description": "L'attuale tasso di riscaldamento globale non è naturale, dal 1880 al 1981 era (0,07°C / 0,13°F) per decennio e dal 1981 questo tasso è aumentato a (0,18°C / 0,32°F). L'aumento della temperatura globale media totale dalla rivoluzione industriale è di circa (1,0 °C / 1,8 °F) e l'emisfero settentrionale della terra si sta riscaldando più velocemente. L'Artico si è riscaldato tra (2 °C / 3,6 °F) e (4 °C / 7,2 °F). La temperatura terrestre e la proporzione di gas come CO2, metano e protossido di azoto nell'atmosfera sono strettamente correlate."
+    },
+    "co2": {
+        "title": "Anidride Carbonica",
+        "subtitle": "Livelli di anidride carbonica dal 2012 ad oggi",
+        "chart": {
+            "labelX": "Anno",
+            "labelY": "ppm"
+        },
+        "description": "Per migliaia di anni, la concentrazione naturale di CO2 nell'atmosfera terrestre è stata di circa 280 parti per milione (ppm). Dall'inizio della rivoluzione industriale, le attività umane come la combustione di combustibili fossili, la deforestazione e gli allevamenti intensivi hanno aumentato questa quantità di oltre il 30%."
+    },
+    "methane": {
+        "title": "Metano",
+        "subtitle": "Livelli di metano dal 1983 ad oggi",
+        "chart": {
+            "labelX": "Anno",
+            "labelY": "ppb"
+        },
+        "description": "Il metano è un gas infiammabile formato da processi geologici e biologici. Alcuni di questi processi naturali sono, ad esempio, perdite da riserve di gas naturale e zone umide. Il 50-65% del totale delle emissioni globali di metano proviene dalle attività umane, tra cui: allevamenti intensivi, agricoltura, sistemi petroliferi e del gas, rifiuti di case e aziende, discariche e così via. Il metano è un gas con un potenziale di riscaldamento globale molte volte più forte della CO2. Per più di 650.000 anni, la concentrazione di metano nell'atmosfera è stata compresa tra 350 e 800 parti per miliardo (ppb). Dall'inizio della rivoluzione industriale, le attività umane hanno aumentato questo valore di circa il 150%."
+    },
+    "no2": {
+        "title": "Biossido di Azoto",
+        "subtitle": "Livelli di biossido di azoto dal 2001 ad oggi",
+        "chart": {
+            "labelX": "Anno",
+            "labelY": "ppb"
+        },
+        "description": "Il biossido di azoto è un gas prodotto dalla combustione di combustibili fossili e rifiuti solidi, fertilizzanti a base di azoto, impianti di trattamento delle acque reflue, processi naturali e altre attività agricole e industriali. È il terzo gas che intrappola il calore nell'atmosfera e il più grande composto distruttore di ozono emesso dalle attività umane."
+    },
+    "glaciers": {
+        "title": "Ghiaccio Polare",
+        "subtitle": "Estensione del ghiaccio marino artico dal 1979 ad oggi",
+        "chart": {
+            "labelX": "Anno",
+            "labelY": "Milioni di km2",
+            "legend_1": "estensione",
+            "legend_2": "area"
+        },
+        "description": "L'Artico si sta riscaldando circa il doppio della media globale. Alcuni dei motivi sono: l'amplificazione artica, l'effetto albedo e il black carbon. Dal 1979 al 1996 abbiamo perso il 2,2 - 3% della copertura di ghiaccio artico. Dal 2010 ad oggi stiamo perdendo il 12,85% per decennio! Un'altra conseguenza è il disgelo del permafrost. Questo è un processo in cui grandi quantità di metano vengono rilasciate nell'atmosfera, alimentando maggiormente il processo di riscaldamento globale."
+    },
+    "contribute": {
+        "title": "Contribuisci seguendo queste dieci azioni",
+        "subtitle": "Tutti possono aiutare a limitare il riscaldamento globale. Dal modo in cui viaggiamo, all'elettricità che utilizziamo, al cibo che mangiamo, possiamo fare la differenza. Clicca su ciascuna di queste dieci azioni per aiutare ad affrontare la crisi climatica.",
+        "flipCard": {
+            "title": [
+                "Risparmia energia in casa",
+                "Cammina, vai in bici o prendi i mezzi pubblici",
+                "Mangia più verdura",
+                "Pensa a come viaggi",
+                "Spreca meno cibo",
+                "Riduci, riutilizza, ripara e ricicla",
+                "Cambia la fonte di energia di casa tua",
+                "Passa a un veicolo elettrico",
+                "Scegli prodotti ecologici",
+                "Parlane"
+            ],
+            "description": [
+                "Gran parte della nostra energia viene prodotta da combustibili fossili. risparmia abbassando il riscaldamento e il climatizzatore, passa a elettrodomestici a risparmio energetico, lava il bucato a freddo e stendi i capi ad asciugare invece di usare un'asciugatrice.",
+                "Le strade sono intasate di veicoli, quasi tutti a diesel o benzina. Camminare o andare in bicicletta ridurrà le emissioni di gas serra e aiuterà la tua salute e forma fisica. Per distanze maggiori, prendi in considerazione il treno o l'autobus. E carsharing quando possibile.",
+                "Mangiare più verdura, frutta, cereali integrali, legumi, noci e semi e meno carne e latticini può ridurre significativamente l'impatto ambientale. La produzione di alimenti a base vegetale generalmente comporta minori emissioni di gas serra e richiede meno energia, terra e acqua.",
+                "Gli aerei bruciano grandi quantità di combustibili fossili, producendo significative emissioni di gas serra. Per questo prendere meno voli è uno dei modi più veloci per ridurre l'impatto ambientale. Quando puoi, incontrati virtualmente, prendi un treno o salta del tutto quel viaggio.",
+                "Quando butti via il cibo, stai anche sprecando le risorse e l'energia che sono state utilizzate per coltivarlo, produrlo, confezionarlo e trasportarlo. E quando il cibo marcisce in una discarica, produce metano, un potente gas serra. Quindi non sprecarlo e composta gli avanzi.",
+                "Elettronica, vestiti e altri articoli che acquistiamo causano emissioni di carbonio in ogni punto della produzione, dall'estrazione delle materie prime alla produzione e al trasporto delle merci sul mercato. Per proteggere il nostro clima, compra meno cose, fai acquisti di seconda mano, ripara ciò che puoi e ricicla.",
+                "Chiedi alla tua società di servizi pubblici se l'energia della tua casa proviene da petrolio, carbone o gas. Se possibile, verifica se puoi passare a fonti rinnovabili come l'eolico o il solare. Oppure installa pannelli solari sul tetto per generare energia per la tua casa.",
+                "Se hai intenzione di acquistare un'auto, passa all'elettrico. Anche se funzionano ancora con elettricità prodotta da combustibili fossili, le auto elettriche aiutano a ridurre l'inquinamento atmosferico e causano emissioni significativamente inferiori rispetto ai veicoli tradizionali.",
+                "Tutto ciò che acquistiamo influisce sul pianeta. Scegli bene quali beni e servizi supportare. Per ridurre l'impatto ambientale, acquista cibi locali e stagionali e scegli prodotti da aziende che utilizzano le risorse in modo responsabile e si impegnano a ridurre le emissioni di gas e i rifiuti.",
+                "Parla e fai in modo che gli altri si uniscano all'azione. È uno dei modi più rapidi ed efficaci per fare la differenza. Parla con i tuoi vicini, colleghi, amici e familiari. Fai sapere alle attività che sostieni le loro scelte ecologiche. Fai appello ai leader locali e mondiali affinché agiscano ora."
+            ]
+        }
+    },
+    "pageNotFound": {
+        "errorNumber": "404",
+        "errorMessage": "Spiacente, non riesco a trovare la pagina che stai cercando :("
+    },
+    "components": {
+        "navLinks": [
+            "Home",
+            "Temperatura",
+            "CO2",
+            "Metano",
+            "NO2",
+            "Ghiacciai",
+            "Contribuisci"
+        ],
+        "footer": "Creato con 🌱 da",
+        "infoButton": "maggiori info",
+        "apiError": {
+            "error": {
+                "404": "Spiacente, non riesco a trovare i dati :(",
+                "other": "Spiacente, impossibile caricare i dati. Riprova più tardi."
+            }
+        }
+    }
+}

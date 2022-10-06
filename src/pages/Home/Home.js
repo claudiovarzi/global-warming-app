@@ -1,40 +1,122 @@
 import React from 'react';
 import styles from './Home.module.css';
-import pagesData from '../../data/pagesData';
-import PageHeader from '../../components/PageHeader/PageHeader';
+import logo from '../../assets/img/logo.svg';
+import Sidebar from '../../components/Sidebar/Sidebar';
+import dashboardCardsData from '../../data/dashboardCardsData';
 import useMediaQueryHook from '../../hooks/useMediaQueryHook';
-import TimerCard from '../../components/Cards/TimerCard/TimerCard';
-import ChartCard from '../../components/Cards/ChartCard/ChartCard';
-import VideoCard from '../../components/Cards/VideoCard/VideoCard';
-import DataCard from '../../components/Cards/DataCard/DataCard';
-import ContributeCard from '../../components/Cards/ContributeCard/ContributeCard';
+import PageHeader from '../../components/PageHeader/PageHeader';
+import DashboardCard from '../../components/Cards/DashboardCard/DashboardCard';
+import AccordionCard from '../../components/Cards/AccordionCard/AccordionCard';
+import { useTranslation } from 'react-i18next';
+import 'animate.css';
 
 export default function Home() {
 	const { isDesktopOrLaptopOrTablet, isMobile } = useMediaQueryHook();
 
+	const { t } = useTranslation();
+
 	return (
 		<div className={styles.home}>
-			{/* Desktop-laptop-tablet header UI */}
+			{/* Sidebar */}
+			<Sidebar />
+
+			{/* Desktop-Laptop-Tablet header UI */}
 			{isDesktopOrLaptopOrTablet && (
-				<header className={styles.header}>
-					<h1 className={styles.title}>{pagesData.home.title}</h1>
-					<p className={styles.subtitle}>{pagesData.home.subtitle}</p>
-				</header>
+				<PageHeader showHeader={false}>
+					<header className={styles.header}>
+						<img src={logo} className={styles.logo} alt="logo" />
+						<h1 style={{ marginRight: '20px', fontWeight: '500' }}>{t('home.title')}</h1>
+						<p style={{ paddingTop: '10px', color: '#6c757d' }}>{t('home.subtitle')}</p>
+					</header>
+				</PageHeader>
 			)}
+
 			{/* Mobile header UI */}
-			{isMobile && <PageHeader title={pagesData.home.title} subtitle={pagesData.home.subtitle} />}
-			{/* page content */}
+			{isMobile && (
+				<PageHeader
+					showHeader={true}
+					showLogo={true}
+					title={t('home.title')}
+					subtitle={t('home.subtitle')}
+				/>
+			)}
+
+			{/* Dashboard */}
 			<main className={styles.main}>
-				<div className={styles.dashboardGrid}>
-					<TimerCard />
-					<div className={styles.cardContainer}>
-						<ChartCard />
-						<VideoCard />
-					</div>
-					<div className={styles.secondCardsRow}>
-						<DataCard />
-						<ContributeCard />
-					</div>
+				{/* Accordion_1 */}
+				<div className={`${styles.cardContainer} animate__animated animate__fadeInDown`}>
+					<AccordionCard
+						title={t('home.dashboard.accordion_1.title')}
+						content={t('home.dashboard.accordion_1.content')}
+						description={t('home.dashboard.accordion_1.description')}
+						link={dashboardCardsData.accordion_1.link}
+					/>
+				</div>
+
+				{/* Accordion_2 */}
+				<div className={`${styles.cardContainer} animate__animated animate__fadeInDown`}>
+					<AccordionCard
+						title={t('home.dashboard.accordion_2.title')}
+						content={t('home.dashboard.accordion_2.content')}
+						description={t('home.dashboard.accordion_2.description')}
+						link={dashboardCardsData.accordion_2.link}
+					/>
+				</div>
+
+				{/* Chart card */}
+				<div className={`${styles.cardContainer} animate__animated animate__fadeInLeft`}>
+					<DashboardCard
+						title={t('home.dashboard.chart.title')}
+						description={t('home.dashboard.chart.description')}
+						link={dashboardCardsData.chart.link}
+					>
+						{dashboardCardsData.chart.content}
+						{dashboardCardsData.chart.secondContent}
+					</DashboardCard>
+				</div>
+
+				{/* Video card */}
+				<div className={`${styles.cardContainer} animate__animated animate__fadeInRight`}>
+					<DashboardCard
+						title={t('home.dashboard.video.title')}
+						description={t('home.dashboard.video.description')}
+						link={dashboardCardsData.video.link}
+					>
+						{dashboardCardsData.video.content}
+					</DashboardCard>
+				</div>
+
+				{/* Data card */}
+				<div className={`${styles.cardContainer} animate__animated animate__fadeInLeft`}>
+					<DashboardCard
+						title={t('home.dashboard.data.title')}
+						description={t('home.dashboard.data.description')}
+						link={dashboardCardsData.data.link}
+					>
+						{dashboardCardsData.data.content}
+					</DashboardCard>
+				</div>
+
+				{/* Timer card */}
+				<div className={`${styles.cardContainer} animate__animated animate__fadeInLeft`}>
+					<DashboardCard
+						title={t('home.dashboard.timer.title')}
+						description={t('home.dashboard.timer.description')}
+						link={false}
+					>
+						{dashboardCardsData.timer.content}
+					</DashboardCard>
+				</div>
+
+				{/* Contribute card */}
+				<div className={`${styles.cardContainer} animate__animated animate__fadeInRight`}>
+					<DashboardCard
+						title={t('home.dashboard.contribute.title')}
+						description={t('home.dashboard.contribute.description')}
+						link={false}
+					>
+						{dashboardCardsData.contribute.content}
+					</DashboardCard>
 				</div>
 			</main>
 		</div>

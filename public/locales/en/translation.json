@@ -1,0 +1,154 @@
+{
+    "home": {
+        "title": "(h)Earth",
+        "subtitle": "your dashboard on global warming",
+        "dashboard": {
+            "accordion_1": {
+                "title": "What is global warming ?",
+                "content": "Global warming or climate change refers to long-term shifts in temperatures and weather patterns. These shifts may be natural, such as through variations in the solar cycle. But since the 1800s, human activities have been the main driver of climate change, primarily due to burning fossil fuels like coal, oil and gas. Burning fossil fuels generates greenhouse gas emissions that act like a blanket wrapped around the Earth, trapping the sun’s heat and raising temperatures.",
+                "description": "source: United Nations"
+
+            },
+            "accordion_2": {
+                "title": "What are greenhouse gasses ?",
+                "content": "Gases that trap heat in the atmosphere are called greenhouse gases. The primary greenhouse gases in Earth's atmosphere are water vapor (H2O), carbon dioxide (CO2), methane (CH4), nitrous oxide (N2O), and ozone (O3). Examples of greenhouse gas emissions that are causing climate change include carbon dioxide and methane. These come from using gasoline for driving a car or coal for heating a building, for example. Clearing land and forests can also release carbon dioxide. Landfills for garbage are a major source of methane emissions. Energy, industry, transport, buildings, agriculture and land use are among the main emitters.",
+                "description": "source: US Environmental Protection Agency"
+            },
+            "chart": {
+                "title": "Global warming causes (%)",
+                "description": "source: US Environmental Protection Agency",
+                "details": [
+                    "Energy production",
+                    "Production of goods",
+                    "Deforestation",
+                    "Transportation",
+                    "Electricity supply for buildings",
+                    "Other"
+                ]
+            },
+            "video": {
+                "title": "Global warming effects",
+                "description": "source: National Geographic"
+            },
+            "data": {
+                "title": "Live graphs",
+                "description": "source: global-warming.org",
+                "chartSelector": [
+                    "Temperature",
+                    "CO2",
+                    "Methane",
+                    "NO2",
+                    "Glaciers"
+                ]
+            },
+            "timer": {
+                "title": "Time left before it's too late",
+                "description": "to keep global warming to no more than 1.5°C, greenhouse gasses emissions need to be reduced by 45% by 2030."
+            },
+            "contribute": {
+                "title": "Contribute",
+                "description": "find out how to help tackle the climate crisis now!"
+            }
+        }
+    },
+    "temperature": {
+        "title": "Temperature",
+        "subtitle": "Global temperature anomalies from year 1880 to present",
+        "chart": {
+            "labelX": "Year",
+            "labelY": "° Celsius"
+        },
+        "description": "The current global warming rate is not natural, from 1880 to 1981 it was (0.07°C / 0.13°F) per decade and since 1981 this rate has increased to (0.18°C / 0.32°F). The total average global temperature rise since the industrial revolution is around (1.0 °C / 1.8 °F) and earth northern hemisphere is warming faster. The arctic has warmed between (2 °C / 3.6 °F) and (4 °C / 7.2 °F). Earth temperature and the proportion of gases such as CO2, methane, and nitrous oxide in the atmosphere is strictly correlated."
+    },
+    "co2": {
+        "title": "Carbon Dioxide",
+        "subtitle": "Carbon Dioxide levels from 2012 to present",
+        "chart": {
+            "labelX": "Year",
+            "labelY": "ppm"
+        },
+        "description": "For thousands of years, the natural concentration of CO2 in earth atmosphere was around 280 ppm. From the beginning of the industrial revolution, human activities like the burning of fossil fuels, deforestation, and livestock have increased this amount by more than 30%."
+    },
+    "methane": {
+        "title": "Methane",
+        "subtitle": "Methane levels from 1983 to present",
+        "chart": {
+            "labelX": "Year",
+            "labelY": "ppb"
+        },
+        "description": "Methane is a flammable gas formed by geological and biological processes. Some of the natural ones are leaks from natural gas systems and wetlands. 50-65% of total global methane emissions come from human activities, these include: livestock, agriculture, oil and gas systems, waste from homes and businesses, landfills, and so on. Methane is a gas with a global warming potential several times stronger than of CO2. For more than 650,000 years, methane concentration in the atmosphere was between 350 - 800 parts per billion (ppb). From the beginning of the industrial revolution, human activities have increased this amount by around 150%."
+    },
+    "no2": {
+        "title": "Nitrous Oxide",
+        "subtitle": "Nitrous Oxide levels from 2001 to present",
+        "chart": {
+            "labelX": "Year",
+            "labelY": "ppb"
+        },
+        "description": "Nitrous oxide is a gas that is produced by the combustion of fossil fuel and solid waste, nitrogen-base fertilizers, sewage treatment plants, natural processes, and other agricultural and industrial activities. It is the third largest heat-trapping gas in the atmosphere and the biggest ozone-destroying compound emitted by human activities."
+    },
+    "glaciers": {
+        "title": "Polar Ice",
+        "subtitle": "Arctic sea ice extent since 1979",
+        "chart": {
+            "labelX": "Year",
+            "labelY": "Million sq km",
+            "legend_1": "extent",
+            "legend_2": "area"
+        },
+        "description": "The arctic is warming around twice as fast as global average. Some of the reasons for this are: The arctic amplification, the albedo effect, and black carbon. From 1979 to 1996, we lost 2.2 - 3% of the arctic ice cover. From 2010 to present we are losing 12.85% per decade! Another consequence is permafrost thawing. This is a process in which large amounts of methane is released to the atmosphere, fueling more the process of global warming."
+    },
+    "contribute": {
+        "title": "Contribute with these ten actions",
+        "subtitle": "Everyone can help limit climate change and global warming. From the way we travel, to the electricity we use and the food we eat, we can make a difference. Click on each of these ten actions to help tackle the climate crisis.",
+        "flipCard": {
+            "title": [
+                "Save energy at home",
+                "Walk, bike, or take public transport",
+                "Eat more vegetables",
+                "Consider your travel",
+                "Throw away less food",
+                "Reduce, reuse, repair & recycle",
+                "Change your home's source of energy",
+                "Switch to an electric vehicle",
+                "Choose eco-friendly products",
+                "Speak up"
+            ],
+            "description": [
+                "Much of our electricity and heat are powered by coal, oil and gas. Use less energy by lowering your heating and cooling, switching to LED light bulbs and energy-efficient electric appliances, washing your laundry with cold water, or hanging things to dry instead of using a dryer.",
+                "The world’s roadways are clogged with vehicles, most of them burning diesel or gasoline. Walking or riding a bike instead of driving will reduce greenhouse gas emissions and help your health and fitness. For longer distances, consider taking a train or bus. And carpool whenever possible.",
+                "Eating more vegetables, fruits, whole grains, legumes, nuts, and seeds, and less meat and dairy, can significantly lower your environmental impact. Producing plant-based foods generally results in fewer greenhouse gas emissions and requires less energy, land, and water.",
+                "Airplanes burn large amounts of fossil fuels, producing significant greenhouse gas emissions. That makes taking fewer flights one of the fastest ways to reduce your environmental impact. When you can, meet virtually, take a train, or skip that long-distance trip altogether.",
+                "When you throw food away, you're also wasting the resources and energy that were used to grow, produce, package, and transport it. And when food rots in a landfill, it produces methane, a powerful greenhouse gas. So use what you buy and compost any leftovers.",
+                "Electronics, clothes, and other items we buy cause carbon emissions at each point in production, from the extraction of raw materials to manufacturing and transporting goods to market. To protect our climate, buy fewer things, shop second-hand, repair what you can, and recycle.",
+                "Ask your utility company if your home energy comes from oil, coal or gas. If possible, see if you can switch to renewable sources such as wind or solar. Or install solar panels on your roof to generate energy for your home.",
+                "If you plan to buy a car, consider going electric, with more and cheaper models coming on the market. Even if they still run on electricity produced from fossil fuels, electric cars help reduce air pollution and cause significantly fewer greenhouse gas emissions than gas or diesel-powered vehicles.",
+                "Everything we buy affects the planet. Choose wisely which goods and services you support. To reduce your environmental impact, buy local and seasonal foods, and choose products from companies who use resources responsibly and are committed to cutting their gas emissions and waste.",
+                "Speak up and get others to join in taking action. It's one of the quickest and most effective ways to make a difference. Talk to your neighbors, colleagues, friends, and family. Let business owners know you support bold changes. Appeal to local and world leaders to act now."
+            ]
+        }
+    },
+    "pageNotFound": {
+        "errorNumber": "404",
+        "errorMessage": "Sorry, can't find the page you're looking for :("
+    },
+    "components": {
+        "navLinks": [
+            "Home",
+            "Temperature",
+            "CO2",
+            "Methane",
+            "NO2",
+            "Glaciers",
+            "Contribute"
+        ],
+        "footer": "Made with 🌱 by",
+        "infoButton": "more info",
+        "apiError": {
+            "error": {
+                "404": "Sorry, can't find data :(",
+                "other": "Sorry, can't load data. Please try again later."
+            }
+        }
+    }
+}

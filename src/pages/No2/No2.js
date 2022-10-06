@@ -1,38 +1,42 @@
 import React from 'react';
-import styles from './No2.module.css';
-import PageHeader from '../../components/PageHeader/PageHeader';
+import styles from '../PagesStyles.module.css';
+import Sidebar from '../../components/Sidebar/Sidebar';
+import CardBase from '../../components/Cards/CardBase/CardBase';
 import No2Chart from '../../components/Charts/No2Chart/No2Chart';
-import PageContent from '../../components/PageContent/PageContent';
 import ApiError from '../../components/ApiError/ApiError';
-import useFetch from '../../hooks/useFetch';
-import fetchLinks from '../../data/fetchLinks';
 import pagesData from '../../data/pagesData';
+import { fetchData } from '../../clientAPI/fetchData';
+import fetchLinks from '../../clientAPI/fetchLinks';
+import { useQuery } from '@tanstack/react-query';
+import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner';
+import { useTranslation } from 'react-i18next';
 
 export default function No2() {
-	// fetch data with custom hook
-	const { data, error } = useFetch(fetchLinks.no2);
-	const { nitrous } = data;
+	const { isLoading, isError, isSuccess, error, data } = useQuery(['no2Data'], () =>
+		fetchData(fetchLinks.no2)
+	);
 
-	// filter data by year
-	const filteredData = nitrous
-		.filter((object) => object.date.includes('.3'))
-		.map((object) => {
-			return {
-				year: object.date.replace('.3', ''),
-				ppb: object.average,
-			};
-		});
-
-	// if API call has errors renders a message instead of chart
-	const currentUI = error ? <ApiError errorType={error} /> : <No2Chart data={filteredData} />;
-
-	//console.log(filteredData);
+	const { t } = useTranslation();
 
 	return (
-		<main className={styles.main}>
-			<PageHeader title={pagesData.no2.title} subtitle={pagesData.no2.subtitle} />
-			{currentUI}
-			<PageContent description={pagesData.no2.description} link={pagesData.no2.link} />
-		</main>
+		<>
+			<Sidebar />
+			<main className={styles.main}>
+				<CardBase
+					showHeader={true}
+					title={t('no2.title')}
+					subtitle={t('no2.subtitle')}
+					showContent={true}
+					description={t('no2.description')}
+					link={pagesData.no2.link}
+				>
+					{isLoading && <LoadingSpinner />}
+
+					{isError && <ApiError error={error} />}
+
+					{isSuccess && <No2Chart data={data} />}
+				</CardBase>
+			</main>
+		</>
 	);
 }

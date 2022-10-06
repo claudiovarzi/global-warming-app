@@ -3,7 +3,32 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    
+}
+
+.languageList {
+    width: 100%;
+    margin-right: 20px;
+    color: #8675ff;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.dropDown {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 1.5rem;
+}
+
+.lngIcon {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.arrow {
+    cursor: pointer;
 }
 
 .navMenu {

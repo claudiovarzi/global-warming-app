@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from './Co2Chart.module.css';
+import React, { useTransition } from 'react';
+import styles from '../ChartStyles.module.css';
 import {
 	LineChart,
 	Line,
@@ -9,13 +9,30 @@ import {
 	Tooltip,
 	ResponsiveContainer,
 } from 'recharts'; /* chart library (https://recharts.org/en-US) */
+import { useTranslation } from 'react-i18next';
 
-export default function Co2Chart(props) {
+export default function Co2Chart({ data }) {
+	// filter data by year
+	const filteredData = data.co2
+		.filter((object) => {
+			if (object.month === '1' && object.day === '1') {
+				return object;
+			}
+		})
+		.map((object) => {
+			return {
+				year: object.year,
+				ppm: object.trend,
+			};
+		});
+
+	const { t } = useTranslation();
+
 	return (
 		<div className={styles.chartContainer}>
 			<ResponsiveContainer width="100%" height="100%">
 				<LineChart
-					data={props.data}
+					data={filteredData}
 					syncId="id"
 					margin={{
 						top: 10,
@@ -26,14 +43,14 @@ export default function Co2Chart(props) {
 				>
 					<CartesianGrid strokeDasharray="3 3" />
 					<XAxis
-						label={{ value: 'Year', position: 'bottom', offset: 19 }}
+						label={{ value: t('co2.chart.labelX'), position: 'bottom', offset: 17 }}
 						padding={{ left: 30, right: 30 }}
 						dataKey="year"
 						angle={-35}
 						tickMargin={10}
 					/>
 					<YAxis
-						label={{ value: 'ppm', angle: -90, position: 'insideLeft', offset: 0 }}
+						label={{ value: t('co2.chart.labelY'), angle: -90, position: 'insideLeft', offset: 0 }}
 						dataKey="ppm"
 						type="number"
 						domain={['dataMin', 'auto']}
@@ -44,7 +61,7 @@ export default function Co2Chart(props) {
 						type="monotone"
 						dataKey="ppm"
 						dot={{ strokeWidth: 2, r: 2 }}
-						stroke="#ff9770"
+						stroke="#6c8dfa"
 						strokeWidth={2}
 						activeDot={{ r: 8 }}
 					/>

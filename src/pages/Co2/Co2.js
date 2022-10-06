@@ -1,42 +1,42 @@
 import React from 'react';
-import styles from './Co2.module.css';
-import PageHeader from '../../components/PageHeader/PageHeader';
+import styles from '../PagesStyles.module.css';
+import Sidebar from '../../components/Sidebar/Sidebar';
+import CardBase from '../../components/Cards/CardBase/CardBase';
 import Co2Chart from '../../components/Charts/Co2Chart/Co2Chart';
 import ApiError from '../../components/ApiError/ApiError';
-import PageContent from '../../components/PageContent/PageContent';
-import useFetch from '../../hooks/useFetch';
-import fetchLinks from '../../data/fetchLinks';
 import pagesData from '../../data/pagesData';
+import { fetchData } from '../../clientAPI/fetchData';
+import fetchLinks from '../../clientAPI/fetchLinks';
+import { useQuery } from '@tanstack/react-query';
+import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner';
+import { useTranslation } from 'react-i18next';
 
 export default function Co2() {
-	// fetch data with custom hook
-	const { data, error } = useFetch(fetchLinks.co2);
-	const { co2 } = data;
+	const { isLoading, isError, isSuccess, error, data } = useQuery(['co2Data'], () =>
+		fetchData(fetchLinks.co2)
+	);
 
-	// filter data by year
-	const filteredData = co2
-		.filter((object) => {
-			if (object.month === '1' && object.day === '1') {
-				return object;
-			}
-		})
-		.map((object) => {
-			return {
-				year: object.year,
-				ppm: object.trend,
-			};
-		});
-
-	// if API call has errors renders a message instead of chart
-	const currentUI = error ? <ApiError errorType={error} /> : <Co2Chart data={filteredData} />;
-
-	//console.log(filteredData);
+	const { t } = useTranslation();
 
 	return (
-		<main className={styles.main}>
-			<PageHeader title={pagesData.co2.title} subtitle={pagesData.co2.subtitle} />
-			{currentUI}
-			<PageContent description={pagesData.co2.description} link={pagesData.co2.link} />
-		</main>
+		<>
+			<Sidebar />
+			<main className={styles.main}>
+				<CardBase
+					showHeader={true}
+					title={t('co2.title')}
+					subtitle={t('co2.subtitle')}
+					showContent={true}
+					description={t('co2.description')}
+					link={pagesData.co2.link}
+				>
+					{isLoading && <LoadingSpinner />}
+
+					{isError && <ApiError error={error} />}
+
+					{isSuccess && <Co2Chart data={data} />}
+				</CardBase>
+			</main>
+		</>
 	);
 }
