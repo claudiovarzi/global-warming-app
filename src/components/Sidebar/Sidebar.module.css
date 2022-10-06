@@ -6,10 +6,11 @@
 }
 
 .languageList {
-    width: 100%;
-    margin-right: 20px;
+    width: 50px;
+    margin-right: 10px;
     color: #8675ff;
-    position: relative;
+    position: absolute;
+    right: 1%;
     display: flex;
     justify-content: flex-end;
     align-items: center;

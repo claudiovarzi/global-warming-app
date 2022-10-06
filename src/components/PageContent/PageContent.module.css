@@ -10,5 +10,8 @@
     width: 70%;
     margin: 50px auto;
     text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    word-spacing: -0.05rem;
     color: #6c757d;
 }
